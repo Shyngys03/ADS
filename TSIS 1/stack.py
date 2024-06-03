@@ -26,4 +26,23 @@ class Stack: #LIFO
     
     def clear(self) -> None:
         self.elements.clear()
-        # self.elements = []
+
+
+my_stack = Stack()
+
+my_stack.push(1) # now stack = [1]
+my_stack.push(2) # now stack = [1, 2]
+
+print(my_stack.top()) # will return 2, because last element is 2
+print(my_stack.size()) # will return 2, because there are 2 elements
+
+my_stack.pop() # now stack = [1]
+print(my_stack.empty()) # return False, because stack has 1 element
+
+my_stack.push(12) # now stack = [1, 12]
+
+my_stack.clear() # now stack = []
+
+# Now stack is empty and if you try to use top() or pop() methods, it will return IndexError
+
+my_stack.top()
